@@ -1,0 +1,32 @@
+{
+	"name": "remote-mcp-server-authless",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"dev:local-browser": "tsx scripts/local-browser-mcp.ts",
+		"dev:local-browser:headed": "LOCAL_BROWSER_HEADLESS=false tsx scripts/local-browser-mcp.ts",
+		"auto-book:sunday": "tsx scripts/auto-book-sunday.ts",
+		"format": "oxfmt --write .",
+		"lint:fix": "oxlint --fix",
+		"start": "wrangler dev",
+		"cf-typegen": "wrangler types",
+		"type-check": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@cloudflare/playwright": "^1.1.0",
+		"@modelcontextprotocol/sdk": "^1.26.0",
+		"agents": "^0.4.1",
+		"playwright": "^1.58.2",
+		"tsx": "^4.21.0",
+		"zod": "^4.3.6"
+	},
+	"devDependencies": {
+		"@types/node": "^25.2.3",
+		"oxfmt": "^0.32.0",
+		"oxlint": "^1.47.0",
+		"typescript": "5.9.3",
+		"wrangler": "^4.65.0"
+	}
+}
