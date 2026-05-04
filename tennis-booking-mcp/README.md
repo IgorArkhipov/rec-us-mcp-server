@@ -63,13 +63,13 @@ npx playwright install chromium
 2. Start the local-browser MCP server:
 
 ```bash
-npm run dev:local-browser
+npm run dev:local-browser --port 8788
 ```
 
 For visible browser windows (headed mode), use:
 
 ```bash
-npm run dev:local-browser:headed
+npm run dev:local-browser:headed --port 8788
 ```
 
 This server runs over stdio (for local MCP clients) and supports the same core tools:
